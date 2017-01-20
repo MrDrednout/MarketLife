@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Market Life:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Market_Life_jar</output-path>
+    <root id="archive" name="Market Life.jar">
+      <element id="module-output" name="MarketLife" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/marketlite/library/mysql-connector-java-5.1.24-bin.jar" path-in-jar="/" />
+      <element id="library" level="project" name="mysql-connector-java-5.1.24-bin" />
+    </root>
+  </artifact>
+</component>
