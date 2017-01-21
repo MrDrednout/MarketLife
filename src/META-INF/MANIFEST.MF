@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: marketlite.start.Main
+Main-Class: marketlife.start.Main
 

@@ -1,14 +1,10 @@
-package marketlite.start;
+package marketlife.start;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import marketlite.controllers.PasswordController;
-import marketlite.interfaces.impls.CollectionWorkGoods;
-import marketlite.objects.Goods;
 
 import java.io.IOException;
 import java.sql.SQLException;

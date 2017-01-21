@@ -1,16 +1,12 @@
-package marketlite.controllers;
+package marketlife.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import marketlite.start.Main;
-import marketlite.start.MySQLConnect;
+import marketlife.start.MySQLConnect;
 
 import java.io.IOException;
 import java.sql.ResultSet;

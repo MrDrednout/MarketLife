@@ -1,4 +1,4 @@
-package marketlite.controllers;
+package marketlife.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,8 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import marketlite.interfaces.impls.CollectionWorkGoods;
-import marketlite.objects.Goods;
+import marketlife.interfaces.impls.CollectionWorkGoods;
+import marketlife.objects.Goods;
 
 import java.io.IOException;
 import java.sql.SQLException;

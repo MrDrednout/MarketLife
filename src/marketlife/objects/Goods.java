@@ -1,4 +1,4 @@
-package marketlite.objects;
+package marketlife.objects;
 
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;

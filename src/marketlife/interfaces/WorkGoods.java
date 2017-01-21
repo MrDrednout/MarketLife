@@ -1,6 +1,6 @@
-package marketlite.interfaces;
+package marketlife.interfaces;
 
-import marketlite.objects.Goods;
+import marketlife.objects.Goods;
 
 /**
  * Created by Viktor on 06.01.2017.

@@ -1,14 +1,13 @@
-package marketlite.interfaces.impls;
+package marketlife.interfaces.impls;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import marketlite.interfaces.WorkGoods;
-import marketlite.objects.Goods;
-import marketlite.start.MySQLConnect;
+import marketlife.interfaces.WorkGoods;
+import marketlife.objects.Goods;
+import marketlife.start.MySQLConnect;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 /**
  * Created by Viktor on 06.01.2017.
