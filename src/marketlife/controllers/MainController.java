@@ -27,6 +27,9 @@ public class MainController {
     private Button button_show;
 
     @FXML
+    private Button button_create;
+
+    @FXML
     private Button button_card_product;
 
     @FXML
@@ -134,7 +137,6 @@ public class MainController {
     }
 
     public void show_card_product(Window parentWinwdow) {
-
         if (card_product == null) {
             card_product = new Stage();
             card_product.setTitle("Карточка продукта");
@@ -148,4 +150,12 @@ public class MainController {
         card_product.show();
     }
 
+    public void button_action_create(ActionEvent actionEvent) throws IOException {
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/fxml/create_product.fxml"));
+        primaryStage.setTitle("Заполните поля и нажмите \"Создать\"");
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
 }

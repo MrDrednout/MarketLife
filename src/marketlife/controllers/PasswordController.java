@@ -84,7 +84,8 @@ public class PasswordController {
         String query = "select count(*) as count_user from v_users where login ='"+login+"'";
         MainController MC = new MainController();
 
-        ResultSet rs = MS.SQLConnect(query);
+        //MS.SQLOpenConnect();
+        ResultSet rs = MS.SQLQuery(query);
 
         while (rs.next()) {
             count_user = rs.getInt("count_user");
@@ -99,7 +100,7 @@ public class PasswordController {
                 break;
             case 1:
                 query = "select id_user, flg_block, attempt, password, login from USERS where login = '"+login+"'";
-                rs = MS.SQLConnect(query);
+                rs = MS.SQLQuery(query);
                 while (rs.next()) {
                     id_user = rs.getInt("id_user");
                     block_flg = rs.getInt("flg_block");

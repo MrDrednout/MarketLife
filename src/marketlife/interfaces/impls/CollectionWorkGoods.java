@@ -39,7 +39,7 @@ public class CollectionWorkGoods implements WorkGoods {
     public void fillTestData() throws SQLException {
 
         MySQLConnect MS = new MySQLConnect();
-        ResultSet rs = MS.SQLConnect("select * from v_goods");
+        ResultSet rs = MS.SQLQuery("select * from v_goods");
 
         goodsList.clear();
 

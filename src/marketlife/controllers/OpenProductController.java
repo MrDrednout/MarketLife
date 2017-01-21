@@ -23,14 +23,12 @@ public class OpenProductController {
 
     private Goods goods;
 
-
-
     public void setGoods(Goods goods) throws SQLException {
         this.goods = goods;
         System.out.println(goods.getId_goods());
         System.out.println(goods.getType_goods()+goods.getName_goods());
         MySQLConnect MS = new MySQLConnect();
-        ResultSet rs = MS.SQLConnect("select * from v_goods_card where concat(type_goods, name_goods) = '" + goods.getType_goods()+goods.getName_goods()+"'");
+        ResultSet rs = MS.SQLQuery("select * from v_goods_card where concat(type_goods, name_goods) = '" + goods.getType_goods()+goods.getName_goods()+"'");
     }
 
 
@@ -40,11 +38,4 @@ public class OpenProductController {
         stage.hide();
     }
 
-/*
-    public void actionSave(javafx.event.ActionEvent actionEvent) {
-        person.setPhone(txtPhone.getText());
-        person.setFio(txtFIO.getText());
-        actionClose(actionEvent);
-    }
-*/
 }
