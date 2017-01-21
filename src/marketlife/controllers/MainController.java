@@ -94,7 +94,7 @@ public class MainController {
         column_material.setCellValueFactory(new PropertyValueFactory<Goods, String>("material"));
 
         try {
-            fxmlLoader.setLocation(getClass().getResource("../fxml/open_product.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/marketlife/fxml/open_product.fxml"));
             fxmlEdit = fxmlLoader.load();
             openProductController = fxmlLoader.getController();
         } catch (IOException e) {
@@ -123,7 +123,7 @@ public class MainController {
 
     public void show_main() throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../fxml/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/fxml/main.fxml"));
         stage.setTitle("Market Life 0.04b");
         stage.setMinWidth(730);
         stage.setMinHeight(500);

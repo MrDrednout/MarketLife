@@ -1,9 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" build-on-make="true" name="Market Life">
-    <output-path>$PROJECT_DIR$/out/artifacts/Market_Life</output-path>
+  <artifact type="javafx" build-on-make="true" name="MarketLife">
+    <output-path>$PROJECT_DIR$/out/artifacts/MarketLife</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="marketlite.start.Main" />
+        <option name="appClass" value="marketlife.start.Main" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
         <option name="nativeBundle" value="all" />
@@ -13,7 +13,7 @@
       </options>
     </properties>
     <root id="root">
-      <element id="archive" name="Market_Life.jar">
+      <element id="archive" name="MarketLife.jar">
         <element id="module-output" name="MarketLife" />
       </element>
     </root>
