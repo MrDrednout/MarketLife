@@ -5,19 +5,19 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.controllers.OpenProductController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProductCard.controllers.ProductCard">
    <children>
       <AnchorPane prefHeight="159.0" prefWidth="955.0" VBox.vgrow="ALWAYS">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Выберите товар:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-            <TableView layoutX="14.0" layoutY="46.0" prefHeight="105.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="25.0">
+            <TableView fx:id="table_minigoods" layoutX="14.0" layoutY="46.0" prefHeight="105.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="25.0">
               <columns>
-                  <TableColumn prefWidth="75.0" text="ID товара" />
-                <TableColumn prefWidth="75.0" text="Цвет" />
-                <TableColumn prefWidth="75.0" text="Размер" />
-                  <TableColumn prefWidth="75.0" text="Принт" />
-                  <TableColumn prefWidth="75.0" text="Материал" />
-                  <TableColumn prefWidth="75.0" text="Архив" />
+                  <TableColumn fx:id="column_id_goods" prefWidth="75.0" text="ID товара" />
+                <TableColumn fx:id="column_color_goods" prefWidth="75.0" text="Цвет" />
+                <TableColumn fx:id="column_size_goods" prefWidth="75.0" text="Размер" />
+                  <TableColumn fx:id="column_print" prefWidth="75.0" text="Принт" />
+                  <TableColumn fx:id="column_material" prefWidth="75.0" text="Материал" />
+                  <TableColumn fx:id="column_in_arhive" prefWidth="75.0" text="Архив" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

@@ -1,4 +1,4 @@
-package marketlife.controllers;
+package marketlife.window.ProductsList.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,13 +13,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import marketlife.interfaces.impls.CollectionWorkGoods;
-import marketlife.objects.Goods;
+import marketlife.window.ProductsList.interfaces.impls.CollectionWorkGoods;
+import marketlife.window.ProductCard.controllers.ProductCard;
+import marketlife.window.ProductsList.objects.Goods;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class MainController {
+public class ProductList {
 
     private CollectionWorkGoods workGoodsImpl = new CollectionWorkGoods();
 
@@ -78,7 +79,7 @@ public class MainController {
     private Parent fxmlEdit;
     private Stage card_product;
     private FXMLLoader fxmlLoader = new FXMLLoader();
-    private OpenProductController openProductController;
+    private ProductCard openProductController;
 
     @FXML
     private void initialize(){
@@ -97,7 +98,7 @@ public class MainController {
         column_material.setCellValueFactory(new PropertyValueFactory<Goods, String>("material"));
 
         try {
-            fxmlLoader.setLocation(getClass().getResource("/marketlife/fxml/open_product.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/marketlife/window/ProductCard/fxml/ProductCard.fxml"));
             fxmlEdit = fxmlLoader.load();
             openProductController = fxmlLoader.getController();
         } catch (IOException e) {
@@ -126,7 +127,7 @@ public class MainController {
 
     public void show_main() throws IOException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/fxml/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductsList/fxml/ProductList.fxml"));
         stage.setTitle("Market Life 0.04b");
         stage.setMinWidth(730);
         stage.setMinHeight(500);
@@ -152,7 +153,7 @@ public class MainController {
 
     public void button_action_create(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/fxml/create_product.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/create_product.fxml"));
         primaryStage.setTitle("Заполните поля и нажмите \"Создать\"");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));

@@ -1,4 +1,4 @@
-package marketlife.controllers;
+package marketlife.window.EnterPassword.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,7 +6,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import marketlife.start.MySQLConnect;
+import marketlife.window.ProductsList.controllers.ProductList;
+import marketlife.codesoftware.MySQLConnect;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 /**
  * Created by Viktor on 05.01.2017.
  */
-public class PasswordController {
+public class EnterPassword {
 
     @FXML
     private Button button_entrance;
@@ -82,7 +83,7 @@ public class PasswordController {
         String login = text_login.getText(), password = text_password.getText(), password_db = null, login_db = null;
         int id_user = 0, block_flg = 0, attempt = 0, count_user = 0;
         String query = "select count(*) as count_user from v_users where login ='"+login+"'";
-        MainController MC = new MainController();
+        ProductList MC = new ProductList();
 
         //MS.SQLOpenConnect();
         ResultSet rs = MS.SQLQuery(query);

@@ -1,4 +1,4 @@
-package marketlife.start;
+package marketlife.codesoftware;
 
     import java.sql.Connection;
     import java.sql.DriverManager;

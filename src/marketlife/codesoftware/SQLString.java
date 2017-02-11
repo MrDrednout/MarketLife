@@ -1,4 +1,4 @@
-package marketlife.start;
+package marketlife.codesoftware;
 
 /**
  * Created by Viktor on 20.01.2017.

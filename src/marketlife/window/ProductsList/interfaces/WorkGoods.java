@@ -1,6 +1,6 @@
-package marketlife.interfaces;
+package marketlife.window.ProductsList.interfaces;
 
-import marketlife.objects.Goods;
+import marketlife.window.ProductsList.objects.Goods;
 
 /**
  * Created by Viktor on 06.01.2017.

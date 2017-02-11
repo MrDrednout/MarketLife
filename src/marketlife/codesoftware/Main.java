@@ -1,4 +1,4 @@
-package marketlife.start;
+package marketlife.codesoftware;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/fxml/password.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/EnterPassword/fxml/EnterPassword.fxml"));
         primaryStage.setTitle("Введите логин и пароль");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
