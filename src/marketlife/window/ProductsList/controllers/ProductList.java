@@ -107,7 +107,7 @@ public class ProductList {
     }
 
     public void button_action_show(ActionEvent actionEvent) throws SQLException {
-        workGoodsImpl.fillTestData();
+        workGoodsImpl.fillingGoods();
         table_goods.setItems(workGoodsImpl.getGoodsList());
     }
 
@@ -153,7 +153,7 @@ public class ProductList {
 
     public void button_action_create(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/create_product.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/fxml/ProductCreate.fxml"));
         primaryStage.setTitle("Заполните поля и нажмите \"Создать\"");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));

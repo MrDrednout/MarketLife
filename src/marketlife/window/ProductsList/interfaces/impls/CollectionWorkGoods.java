@@ -36,7 +36,7 @@ public class CollectionWorkGoods implements WorkGoods {
         return goodsList;
     }
 
-    public void fillTestData() throws SQLException {
+    public void fillingGoods() throws SQLException {
 
         MySQLConnect MS = new MySQLConnect();
         ResultSet rs = MS.SQLQuery("select * from v_goods");

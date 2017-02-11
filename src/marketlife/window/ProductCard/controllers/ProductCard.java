@@ -4,13 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.Node;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import marketlife.window.ProductCard.interfaces.impls.CollectionWorkGoodsShort;
 import marketlife.window.ProductsList.objects.Goods;
 import marketlife.window.ProductCard.objects.GoodsShort;
 import marketlife.codesoftware.MySQLConnect;
-
-import javax.swing.text.TabableView;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -21,29 +21,34 @@ import java.sql.SQLException;
 
 public class ProductCard {
 
+    private CollectionWorkGoodsShort workGoodsShortImpl = new CollectionWorkGoodsShort();
+    
     @FXML
     private Label show_id_doogs;
 
     @FXML
-    private TabableView table_mini_goods;
+    private TableView table_GoodsShort;
 
     @FXML
     private TableColumn<GoodsShort, Integer> column_id_goods;
 
     @FXML
-    private void initialize() {
+    private void initialize() throws SQLException {
         column_id_goods.setCellValueFactory(new PropertyValueFactory<GoodsShort, Integer>("id_goods"));
+        workGoodsShortImpl.fillingGoodsShort();
+        table_GoodsShort.setItems(workGoodsShortImpl.getGoodsShort());
     }
 
     private Goods goods;
 
 
-    public void setGoods(Goods goods) throws SQLException {
+    public ResultSet setGoods(Goods goods) throws SQLException {
         this.goods = goods;
         System.out.println(goods.getId_goods());
         System.out.println(goods.getType_goods()+goods.getName_goods());
         MySQLConnect MS = new MySQLConnect();
         ResultSet rs = MS.SQLQuery("select * from v_goods_card where concat(type_goods, name_goods) = '" + goods.getType_goods()+goods.getName_goods()+"'");
+        return rs;
     }
 
 
