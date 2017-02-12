@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Market Life" uuid="24077b2a-f63d-4102-a5a7-6f54b45dbdde">
+    <data-source source="LOCAL" name="mrdrednout_msale@92.53.96.107" uuid="dcb1b1c0-fddf-4af9-b9fb-43b921a1a406">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://92.53.96.107:3306/mrdrednout_msale</jdbc-url>
       <driver-properties>

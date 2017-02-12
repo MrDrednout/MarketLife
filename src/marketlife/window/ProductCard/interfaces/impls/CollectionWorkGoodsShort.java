@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import marketlife.codesoftware.MySQLConnect;
 import marketlife.window.ProductCard.interfaces.WorkGoodsShort;
 import marketlife.window.ProductCard.objects.GoodsShort;
+import marketlife.window.ProductsList.controllers.ProductList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,15 +37,24 @@ public class CollectionWorkGoodsShort implements WorkGoodsShort {
         return goodsShortList;
     }
 
-    public void fillingGoodsShort() throws SQLException {
-
-        MySQLConnect MS = new MySQLConnect();
-        ResultSet rs = MS.SQLQuery("select * from v_goods");
-
+    public void fillingGoodsShort(ResultSet rs) throws SQLException {
+        ProductList ps = new ProductList();
         goodsShortList.clear();
-
         while (rs.next()) {
-            goodsShortList.add(new GoodsShort(rs.getInt("id_goods")));
+            goodsShortList.add(new GoodsShort(
+                    rs.getInt("id_goods"),
+                    rs.getString("type_goods"),
+                    rs.getString("name_goods"),
+                    rs.getString("color"),
+                    rs.getString("size"),
+                    rs.getString("color_string"),
+                    rs.getString("provider"),
+                    rs.getFloat("purchase_price"),
+                    rs.getFloat("cost_of"),
+                    rs.getInt("sum_goods"),
+                    rs.getInt("in_arhive"),
+                    rs.getString("print"),
+                    rs.getString("material")));
         }
     }
 }

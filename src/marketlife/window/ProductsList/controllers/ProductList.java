@@ -22,6 +22,8 @@ import java.sql.SQLException;
 
 public class ProductList {
 
+    public String ss;
+
     private CollectionWorkGoods workGoodsImpl = new CollectionWorkGoods();
 
     @FXML
@@ -112,16 +114,9 @@ public class ProductList {
     }
 
     public void button_card_product_action(ActionEvent actionEvent) throws IOException, SQLException {
-
-
         Goods selectedGoods = (Goods) table_goods.getSelectionModel().getSelectedItem();
-        //System.out.println(selectedGoods);
-
-
         Window parentWindow = ((Node) actionEvent.getSource()).getScene().getWindow();
-
         openProductController.setGoods(selectedGoods);
-
         show_card_product(parentWindow);
     }
 
@@ -153,7 +148,7 @@ public class ProductList {
 
     public void button_action_create(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/fxml/ProductCreate.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/ProductCreate.fxml"));
         primaryStage.setTitle("Заполните поля и нажмите \"Создать\"");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
