@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="mrdrednout_msale@92.53.96.107" uuid="dcb1b1c0-fddf-4af9-b9fb-43b921a1a406">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://92.53.96.107:3306/mrdrednout_msale</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
-    </data-source>
     <data-source source="LOCAL" name="@LENOVOX230SERV" uuid="71becb56-8319-408a-a47a-95fa18eae5be">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>

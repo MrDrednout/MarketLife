@@ -7,10 +7,9 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProductCard.controllers.ProductCard">
    <children>
-      <AnchorPane prefHeight="159.0" prefWidth="955.0" VBox.vgrow="ALWAYS">
+      <AnchorPane prefHeight="193.0" prefWidth="955.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" text="Выберите товар:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-            <TableView fx:id="table_GoodsShort" layoutX="14.0" layoutY="46.0" prefHeight="105.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="25.0">
+            <TableView fx:id="table_GoodsShort" layoutX="14.0" layoutY="46.0" prefHeight="105.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
               <columns>
                   <TableColumn fx:id="column_id_goods" prefWidth="75.0" text="ID товара" />
                 <TableColumn fx:id="column_color_goods" prefWidth="75.0" text="Цвет" />
@@ -23,6 +22,10 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
+            <TextField layoutX="96.0" layoutY="8.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="20.0" layoutY="12.0" text="Тип товара:" />
+            <Label layoutX="346.0" layoutY="12.0" text="Модель:" />
+            <TextField layoutX="411.0" layoutY="8.0" prefHeight="25.0" prefWidth="200.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="245.0" prefWidth="955.0" VBox.vgrow="NEVER">
@@ -43,11 +46,6 @@
                               <TextField disable="true" layoutX="181.0" layoutY="136.0" prefHeight="25.0" prefWidth="92.0" />
                               <Label fx:id="show_id_doogs211" layoutX="87.0" layoutY="199.0" text="Цена продажи:" AnchorPane.topAnchor="180.0" />
                               <TextField disable="true" layoutX="181.0" layoutY="176.0" prefHeight="25.0" prefWidth="92.0" />
-                              <ImageView fitHeight="203.0" fitWidth="200.0" layoutX="741.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
-                                 <image>
-                                    <Image url="@../image/6b238ad172da481f98dd9bf624864838.jpg" />
-                                 </image>
-                              </ImageView>
                            </children>
                         </AnchorPane>
                   </content>
@@ -63,6 +61,11 @@
                      </content>
                   </Tab>
                   <Tab text="Фотографии">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="600.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Заметки">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="600.0" />
                      </content>
