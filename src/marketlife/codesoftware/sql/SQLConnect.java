@@ -10,7 +10,7 @@ package marketlife.codesoftware.sql;
 /**
  * Created by Viktor on 05.01.2017.
  */
-public class MySQLConnect {
+public class SQLConnect {
 
     Connection c = null;
     SQLString s = new SQLString();
@@ -63,6 +63,7 @@ public class MySQLConnect {
     }
 
     public void SQLUpdate (String query) throws SQLException {
+        System.out.println(query);
         Statement st = c.createStatement();//Готовим запрос
         st.executeUpdate(query);
     }

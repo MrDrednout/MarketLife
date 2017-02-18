@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import marketlife.window.ProductCard.interfaces.impls.CollectionWorkGoodsShort;
 import marketlife.window.ProductsList.objects.Goods;
 import marketlife.window.ProductCard.objects.GoodsShort;
-import marketlife.codesoftware.sql.MySQLConnect;
+import marketlife.codesoftware.sql.SQLConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -65,7 +65,7 @@ public class ProductCard {
         this.goods = goods;
         System.out.println(goods.getId_goods());
         System.out.println(goods.getType_goods()+goods.getName_goods());
-        MySQLConnect MS = new MySQLConnect();
+        SQLConnect MS = new SQLConnect();
         ResultSet rs = MS.SQLQuery("select * from v_goods_card where typename = '" + goods.getType_goods()+goods.getName_goods()+"'");
         workGoodsShortImpl.fillingGoodsShort(rs);
         table_GoodsShort.setItems(workGoodsShortImpl.getGoodsShort());

@@ -16,5 +16,12 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="@LENOVOX230SERV" uuid="71becb56-8319-408a-a47a-95fa18eae5be">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@LENOVOX230SERV:1521:XE</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import marketlife.window.ProductsList.interfaces.WorkGoods;
 import marketlife.window.ProductsList.objects.Goods;
-import marketlife.codesoftware.sql.MySQLConnect;
+import marketlife.codesoftware.sql.SQLConnect;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,7 +38,7 @@ public class CollectionWorkGoods implements WorkGoods {
 
     public void fillingGoods() throws SQLException {
 
-        MySQLConnect MS = new MySQLConnect();
+        SQLConnect MS = new SQLConnect();
         ResultSet rs = MS.SQLQuery("select * from v_goods");
 
         goodsList.clear();

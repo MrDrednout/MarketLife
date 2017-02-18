@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import marketlife.window.EnterPassword.sql.EnterPasswordSql;
 import marketlife.window.ProductsList.controllers.ProductList;
-import marketlife.codesoftware.sql.MySQLConnect;
+import marketlife.codesoftware.sql.SQLConnect;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -31,7 +31,7 @@ public class EnterPassword {
     @FXML
     private TextField text_password;
 
-    MySQLConnect MS = new MySQLConnect();
+    SQLConnect MS = new SQLConnect();
     EnterPasswordSql sqls = new EnterPasswordSql();
 
     // Вывод окна о вводе неверного пароля
@@ -85,27 +85,25 @@ public class EnterPassword {
         String login = text_login.getText(), password = text_password.getText(), password_db = null, login_db = null;
         int id_user = 0, block_flg = 0, attempt = 0, count_user = 0;
 
-
-        String query =sqls.countusers(login) ;
+        // объявляем главную форму для последующего отображения
         ProductList MC = new ProductList();
 
-        //MS.SQLOpenConnect();
-        ResultSet rs = MS.SQLQuery(query);
-
+        // находим количество пользователей с введенным логином
+        ResultSet rs = MS.SQLQuery(sqls.countUsers(login));
         while (rs.next()) {
             count_user = rs.getInt("count_user");
         }
 
         switch (count_user){
             case 0:
-                not_users();
+                not_users(); // ввыводим окно если пользователей не существует
                 break;
             case 2:
-                many_users();
+                many_users(); // выводим окно если пользователей больше чем 1 - исключительная ситуация
                 break;
             case 1:
-                query = "select id_user, flg_block, attempt, password, login from USERS where login = '"+login+"'";
-                rs = MS.SQLQuery(query);
+                //выгружаем данные пользователя
+                rs = MS.SQLQuery(sqls.importUsers(login));
                 while (rs.next()) {
                     id_user = rs.getInt("id_user");
                     block_flg = rs.getInt("flg_block");
@@ -113,24 +111,22 @@ public class EnterPassword {
                     password_db = rs.getString("password");
                     login_db = rs.getString("login");
                 }
+                // если логин и пароль совпадают c указанным
                 if (login.compareTo(login_db) == 0 & password.compareTo(password_db) == 0 & block_flg == 0) {
                     // открываем главную форму программы
                     MC.show_main();
                     Stage stage = (Stage) button_exit.getScene().getWindow();
                     stage.close();
                     // сбрасываем в 0 количество неуспешных входов в базе данных
-                    query = "UPDATE ML.USERS SET attempt = 0 WHERE id_user = " + id_user;
-                    MS.SQLUpdate(query);
+                    if (attempt != 0) MS.SQLUpdate(sqls.updateAttemtReset(id_user));
                 } else if (block_flg == 1) {
-                    block_pas();
+                    block_pas(); // выводим окно информирующее о том, что пользователь заблокирован
                 } else if (login.compareTo(login_db) != 0 | password.compareTo(password_db) != 0) {
                     wrong_pas();
-                    query = "UPDATE ML.USERS SET attempt =" + ++attempt + " WHERE id_user = " + id_user;
-                    MS.SQLUpdate(query);
-                    if (attempt == 3) {
-                        query = "UPDATE ML.USERS SET flg_block = 1 WHERE id_user = " + id_user;
-                        MS.SQLUpdate(query);
-                        password_selection();
+                    MS.SQLUpdate(sqls.updateAttemtUp(attempt, id_user));
+                    if (attempt >= 3) {
+                        MS.SQLUpdate(sqls.updateBlockSet1(id_user)); // блокируем пользователя при достижении лимита попыток ввода пароля
+                        password_selection(); // выводим окно о первичной блокиовке
                     }
                 }
                 break;
