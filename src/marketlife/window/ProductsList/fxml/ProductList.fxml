@@ -28,7 +28,10 @@
                         <MenuItem fx:id="menu_setting_mutable" mnemonicParsing="false" onAction="#action_menu_setting_mutable" text="Переменные" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="О программе" />
+                <Menu mnemonicParsing="false" text="О программе">
+                     <items>
+                        <MenuItem fx:id="menu_aboutTheProgramm" mnemonicParsing="false" onAction="#action_menu_aboutTheProgramm" text="О программе" />
+                     </items></Menu>
               </menus>
             </MenuBar>
          </children>

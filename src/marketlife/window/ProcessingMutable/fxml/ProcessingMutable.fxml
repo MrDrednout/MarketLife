@@ -4,7 +4,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProcessingMutable.controllers.ProcessingMutable">
    <children>
       <TableView layoutX="87.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -21,5 +20,6 @@
       <Button layoutX="14.0" layoutY="477.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Создать" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" />
       <Button layoutX="151.0" layoutY="486.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Редактировать" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" />
       <Button layoutX="161.0" layoutY="496.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="285.0" />
+      <Button fx:id="button_closeProcwssingMutable" layoutX="480.0" layoutY="482.0" mnemonicParsing="false" onAction="#action_button_closeProcwssingMutable" prefHeight="25.0" prefWidth="120.0" text="Выход" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="15.0" />
    </children>
 </AnchorPane>

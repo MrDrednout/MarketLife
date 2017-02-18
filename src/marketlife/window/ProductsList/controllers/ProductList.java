@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import marketlife.window.AboutTheProgram.controllers.AboutTheProgram;
 import marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries;
 import marketlife.window.ProcessingMutable.controllers.ProcessingMutable;
 import marketlife.window.ProductCreate.controllers.ProductCreate;
@@ -89,6 +90,7 @@ public class ProductList {
     ProcessingDictionaries processingDictionaries = new ProcessingDictionaries();
     ProcessingMutable processingMutable = new ProcessingMutable();
     ProductCreate productCreate = new ProductCreate();
+    AboutTheProgram aboutTheProgram = new AboutTheProgram();
 
     @FXML
     private void initialize(){
@@ -163,5 +165,9 @@ public class ProductList {
 
     public void action_menu_setting_mutable(ActionEvent actionEvent) throws IOException {
         processingMutable.openProcessingMutable();
+    }
+
+    public void action_menu_aboutTheProgramm(ActionEvent actionEvent) throws IOException {
+        aboutTheProgram.openAboutTheProgramm();
     }
 }

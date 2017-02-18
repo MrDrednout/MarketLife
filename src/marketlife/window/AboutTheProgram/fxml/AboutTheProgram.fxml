@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.AboutTheProgram.controllers.AboutTheProgram">
+   <children>
+      <Label layoutX="179.0" layoutY="14.0" text="О программе.">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="259.0" text="Разработчик: Кузнецов Виктор" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="286.0" text="E-mail: coolezhik@yandex.ru" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="313.0" text="Телефон: 8-925-110-03-87" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_closeAboutTheProgram" layoutX="24.0" layoutY="358.0" mnemonicParsing="false" onAction="#ation_button_closeAboutTheProgram" prefHeight="34.0" prefWidth="424.0" text="Выход" />
+      <TextArea editable="false" layoutX="14.0" layoutY="43.0" prefHeight="213.0" prefWidth="441.0" text="Программа предназначена для автоматизации работы магазина и ведения отчетности.&#10;Находится в разработке.&#10;По вопросам моно обращаться по контактам ниже.&#10;Всем добра." wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

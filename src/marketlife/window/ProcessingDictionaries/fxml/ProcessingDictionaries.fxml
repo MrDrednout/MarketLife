@@ -4,8 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries">
    <children>
       <TabPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -39,6 +38,7 @@
                                     <Button layoutX="14.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Добавить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" />
                                     <Button layoutX="151.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Удалить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" />
                                     <Button layoutX="288.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="295.0" />
+                                    <Button fx:id="button_closeProcessingDictionaries" layoutX="446.0" layoutY="217.0" mnemonicParsing="false" onAction="#action_button_closeProcessingDictionaries" prefHeight="25.0" prefWidth="119.0" text="Выход" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="15.0" />
                                  </children>
                               </AnchorPane>
                           </items>
