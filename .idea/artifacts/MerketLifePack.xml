@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MerketLifePack">
+    <output-path>$PROJECT_DIR$/out/artifacts/MerketLifePack</output-path>
+    <root id="archive" name="MerketLifePack.jar" />
+  </artifact>
+</component>

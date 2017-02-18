@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@LENOVOX230SERV">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ML">
+      <ObjectId>48</ObjectId>
+      <IntrospectionTimestamp>2017-02-18.15:39:36</IntrospectionTimestamp>
+      <CreatedTimestamp>2017-02-13.23:14:06</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:39:14</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="20" parent="2" name="DEPOT">
+      <ObjectId>20071</ObjectId>
+      <CreatedTimestamp>2017-02-13.23:18:43</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:37:51</ModifiedTimestamp>
+    </table>
+    <table id="21" parent="2" name="DICT">
+      <ObjectId>20072</ObjectId>
+      <CreatedTimestamp>2017-02-13.23:22:56</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:38:14</ModifiedTimestamp>
+    </table>
+    <table id="22" parent="2" name="DICT_NAME">
+      <ObjectId>20073</ObjectId>
+      <CreatedTimestamp>2017-02-13.23:25:49</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-13.23:27:53</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="2" name="GOODS">
+      <ObjectId>20075</ObjectId>
+      <CreatedTimestamp>2017-02-14.22:19:56</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:38:44</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="2" name="LINKS">
+      <ObjectId>20081</ObjectId>
+      <CreatedTimestamp>2017-02-14.22:27:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-14.22:27:13</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="2" name="MUTABLE">
+      <ObjectId>20084</ObjectId>
+      <CreatedTimestamp>2017-02-14.22:44:54</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-14.23:08:07</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="2" name="USERS">
+      <ObjectId>20070</ObjectId>
+      <CreatedTimestamp>2017-02-13.23:14:06</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:39:14</ModifiedTimestamp>
+    </table>
+    <column id="27" parent="20" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="20" name="ID_GOODS">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="29" parent="20" name="ID_STOCK">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="30" parent="20" name="COUNT_GOODS">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <index id="31" parent="20" name="DEPOT_PK">
+      <ObjectId>20100</ObjectId>
+      <CreatedTimestamp>2017-02-18.15:37:51</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:37:51</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="20" name="DEPOT_PK">
+      <ModifiedTimestamp>2017-02-18.15:37:51</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>DEPOT_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="21" name="ID_TERMIN">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="21" name="ID_DICT">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="35" parent="21" name="CODE">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="36" parent="21" name="TERMIN">
+      <Position>4</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <column id="37" parent="21" name="FLG_CLOSE">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <index id="38" parent="21" name="DICT_PK">
+      <ObjectId>20101</ObjectId>
+      <CreatedTimestamp>2017-02-18.15:38:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:38:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_TERMIN</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="21" name="DICT_PK">
+      <ModifiedTimestamp>2017-02-18.15:38:14</ModifiedTimestamp>
+      <ColNames>ID_TERMIN</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>DICT_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="22" name="ID_DICT">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="22" name="NAME_DICT">
+      <Position>2</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <index id="42" parent="22" name="DICT_NAME_PK">
+      <ObjectId>20074</ObjectId>
+      <CreatedTimestamp>2017-02-13.23:27:53</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-13.23:27:53</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_DICT</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="22" name="DICT_NAME_PK">
+      <ModifiedTimestamp>2017-02-13.23:27:53</ModifiedTimestamp>
+      <ColNames>ID_DICT</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>DICT_NAME_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="23" name="ID_GOODS">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="23" name="TYPE_GOODS">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="46" parent="23" name="NAME_GOODS">
+      <Position>3</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <column id="47" parent="23" name="ID_COLOR">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="48" parent="23" name="ID_SIZE">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="49" parent="23" name="COLOR_STRING">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="50" parent="23" name="ID_PROVIDER">
+      <Position>7</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="51" parent="23" name="PURCHASE_PRICE">
+      <Position>8</Position>
+      <DataType>FLOAT(126)|0</DataType>
+    </column>
+    <column id="52" parent="23" name="COST_OF">
+      <Position>9</Position>
+      <DataType>FLOAT(126)|0</DataType>
+    </column>
+    <column id="53" parent="23" name="IN_ARHIVE">
+      <Position>10</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="54" parent="23" name="PRINT">
+      <Position>11</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <column id="55" parent="23" name="MATERIAL">
+      <Position>12</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <index id="56" parent="23" name="GOODS_PK">
+      <ObjectId>20102</ObjectId>
+      <CreatedTimestamp>2017-02-18.15:38:44</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:38:44</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_GOODS</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="23" name="GOODS_PK">
+      <ModifiedTimestamp>2017-02-18.15:38:44</ModifiedTimestamp>
+      <ColNames>ID_GOODS</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>GOODS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="24" name="ID_LINKS">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="24" name="ID_GOODS">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="60" parent="24" name="LINKS_TEXT">
+      <Position>3</Position>
+      <DataType>VARCHAR2(1000)|0</DataType>
+    </column>
+    <index id="61" parent="24" name="LINKS_PK">
+      <ObjectId>20082</ObjectId>
+      <CreatedTimestamp>2017-02-14.22:27:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-14.22:27:13</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_LINKS</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="24" name="LINKS_PK">
+      <ModifiedTimestamp>2017-02-14.22:27:13</ModifiedTimestamp>
+      <ColNames>ID_LINKS</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>LINKS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="25" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="25" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <column id="65" parent="25" name="VALUE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="66" parent="25" name="COMMENTS">
+      <Position>4</Position>
+      <DataType>VARCHAR2(300)|0</DataType>
+    </column>
+    <index id="67" parent="25" name="SYS_C007002">
+      <ObjectId>20085</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2017-02-14.22:44:54</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-14.22:44:54</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="25" name="SYS_C007002">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2017-02-14.22:44:54</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007002</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="26" name="ID_USER">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="26" name="F">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="71" parent="26" name="I">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="72" parent="26" name="O">
+      <Position>4</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="73" parent="26" name="LOGIN">
+      <Position>5</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <column id="74" parent="26" name="PASSWORD">
+      <Position>6</Position>
+      <DataType>VARCHAR2(1)|0</DataType>
+    </column>
+    <column id="75" parent="26" name="FLG_BLOCK">
+      <Position>7</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <column id="76" parent="26" name="ATTEMPT">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0</DataType>
+    </column>
+    <index id="77" parent="26" name="USERS_PK">
+      <ObjectId>20103</ObjectId>
+      <CreatedTimestamp>2017-02-18.15:39:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-02-18.15:39:14</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID_USER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="26" name="USERS_PK">
+      <ModifiedTimestamp>2017-02-18.15:39:14</ModifiedTimestamp>
+      <ColNames>ID_USER</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>USERS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

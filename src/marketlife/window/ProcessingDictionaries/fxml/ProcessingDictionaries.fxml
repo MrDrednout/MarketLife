@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Словари">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="137.0" layoutY="139.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView layoutX="160.0" layoutY="19.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="ID" />
+                                        <TableColumn prefWidth="114.0" text="Название" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="14.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Добавить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" />
+                                    <Button layoutX="151.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Удалить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" />
+                                    <Button layoutX="288.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="295.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView layoutX="160.0" layoutY="19.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="ID" />
+                                          <TableColumn prefWidth="114.0" text="Название" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="14.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Добавить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" />
+                                    <Button layoutX="151.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Удалить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" />
+                                    <Button layoutX="288.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="295.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
