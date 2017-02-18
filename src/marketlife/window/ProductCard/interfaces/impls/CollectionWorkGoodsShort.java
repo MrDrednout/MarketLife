@@ -44,7 +44,7 @@ public class CollectionWorkGoodsShort implements WorkGoodsShort {
                     rs.getString("type_goods"),
                     rs.getString("name_goods"),
                     rs.getString("color"),
-                    rs.getString("size"),
+                    rs.getString("sizee"),
                     rs.getString("color_string"),
                     rs.getString("provider"),
                     rs.getFloat("purchase_price"),

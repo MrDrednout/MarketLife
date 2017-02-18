@@ -167,7 +167,6 @@ public class Goods {
         return sum_goods;
     }
 
-
     public int getIn_arhive() {
         return in_arhive.get();
     }

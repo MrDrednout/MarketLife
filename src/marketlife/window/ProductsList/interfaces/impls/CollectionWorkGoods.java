@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import marketlife.window.ProductsList.interfaces.WorkGoods;
 import marketlife.window.ProductsList.objects.Goods;
 import marketlife.codesoftware.sql.SQLConnect;
+import marketlife.window.ProductsList.sql.ProductListSQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,6 +17,8 @@ import java.sql.SQLException;
 public class CollectionWorkGoods implements WorkGoods {
 
     private ObservableList<Goods> goodsList = FXCollections.observableArrayList();
+
+    ProductListSQL sql = new ProductListSQL();
 
     @Override
     public void add(Goods goods) {
@@ -39,7 +42,7 @@ public class CollectionWorkGoods implements WorkGoods {
     public void fillingGoods() throws SQLException {
 
         SQLConnect MS = new SQLConnect();
-        ResultSet rs = MS.SQLQuery("select * from v_goods");
+        ResultSet rs = MS.SQLQuery(sql.querySelectGoods());
 
         goodsList.clear();
 
@@ -47,7 +50,7 @@ public class CollectionWorkGoods implements WorkGoods {
             goodsList.add(new Goods(rs.getInt("id_goods"),
                                     rs.getString("name_goods"),
                                     rs.getString("color"),
-                                    rs.getString("size"),
+                                    rs.getString("sizee"),
                                     rs.getString("color_string"),
                                     rs.getString("provider"),
                                     rs.getFloat("purchase_price"),

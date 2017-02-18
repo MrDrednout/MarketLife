@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import marketlife.window.ProductCard.interfaces.impls.CollectionWorkGoodsShort;
+import marketlife.window.ProductCard.sql.ProductCardSQL;
 import marketlife.window.ProductsList.objects.Goods;
 import marketlife.window.ProductCard.objects.GoodsShort;
 import marketlife.codesoftware.sql.SQLConnect;
@@ -22,6 +23,7 @@ import java.sql.SQLException;
 public class ProductCard {
 
     private CollectionWorkGoodsShort workGoodsShortImpl = new CollectionWorkGoodsShort();
+    ProductCardSQL sql = new ProductCardSQL();
     
     @FXML
     private Label show_id_doogs;
@@ -51,7 +53,7 @@ public class ProductCard {
     private void initialize() throws SQLException {
         column_id_goods.setCellValueFactory(new PropertyValueFactory<GoodsShort, Integer>("id_goods"));
         column_color_goods.setCellValueFactory(new PropertyValueFactory<GoodsShort, String>("color"));
-        column_size_goods.setCellValueFactory(new PropertyValueFactory<GoodsShort, String>("size_goods"));
+        column_size_goods.setCellValueFactory(new PropertyValueFactory<GoodsShort, String>("size"));
         column_print.setCellValueFactory(new PropertyValueFactory<GoodsShort, String>("print"));
         column_material.setCellValueFactory(new PropertyValueFactory<GoodsShort, String>("material"));
         column_in_arhive.setCellValueFactory(new PropertyValueFactory<GoodsShort, Integer>("in_arhive"));
@@ -66,7 +68,7 @@ public class ProductCard {
         System.out.println(goods.getId_goods());
         System.out.println(goods.getType_goods()+goods.getName_goods());
         SQLConnect MS = new SQLConnect();
-        ResultSet rs = MS.SQLQuery("select * from v_goods_card where typename = '" + goods.getType_goods()+goods.getName_goods()+"'");
+        ResultSet rs = MS.SQLQuery(sql.queryProdectCard(goods.getType_goods()+goods.getName_goods()));
         workGoodsShortImpl.fillingGoodsShort(rs);
         table_GoodsShort.setItems(workGoodsShortImpl.getGoodsShort());
     }
