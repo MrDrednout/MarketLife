@@ -126,7 +126,7 @@ public class EnterPassword {
                     MS.SQLUpdate(sqls.updateAttemtUp(attempt, id_user));
                     if (attempt >= 3) {
                         MS.SQLUpdate(sqls.updateBlockSet1(id_user)); // блокируем пользователя при достижении лимита попыток ввода пароля
-                        password_selection(); // выводим окно о первичной блокиовке
+                        password_selection(); // выводим р окно о первичной блокиовке
                     }
                 }
                 break;
