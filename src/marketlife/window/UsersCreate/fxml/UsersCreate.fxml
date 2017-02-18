@@ -6,8 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.UsersCreate.controllers.UsersCreate">
    <children>
       <GridPane layoutX="14.0" layoutY="8.0" prefHeight="240.0" prefWidth="361.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <columnConstraints>
@@ -47,7 +46,7 @@
         </rowConstraints>
          <children>
             <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Создать" GridPane.halignment="CENTER" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Выход" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="button_closeUsersCreate" mnemonicParsing="false" onAction="#action_button_closeUsersCreate" prefHeight="25.0" prefWidth="150.0" text="Выход" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
          </children>
          <padding>
             <Insets left="5.0" right="5.0" />

@@ -33,4 +33,5 @@ public class AboutTheProgram {
         Stage stage = (Stage) button_closeAboutTheProgram.getScene().getWindow();
         stage.close();
     }
+
 }

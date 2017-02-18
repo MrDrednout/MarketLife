@@ -20,6 +20,8 @@ import marketlife.window.ProductCreate.controllers.ProductCreate;
 import marketlife.window.ProductsList.interfaces.impls.CollectionWorkGoods;
 import marketlife.window.ProductCard.controllers.ProductCard;
 import marketlife.window.ProductsList.objects.Goods;
+import marketlife.window.Users.controllers.Users;
+import marketlife.window.UsersCreate.controllers.UsersCreate;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -91,6 +93,8 @@ public class ProductList {
     ProcessingMutable processingMutable = new ProcessingMutable();
     ProductCreate productCreate = new ProductCreate();
     AboutTheProgram aboutTheProgram = new AboutTheProgram();
+    UsersCreate usersCreate = new UsersCreate();
+    Users users = new Users();
 
     @FXML
     private void initialize(){
@@ -169,5 +173,13 @@ public class ProductList {
 
     public void action_menu_aboutTheProgramm(ActionEvent actionEvent) throws IOException {
         aboutTheProgram.openAboutTheProgramm();
+    }
+
+    public void action_menu_ceate_users(ActionEvent actionEvent) throws IOException {
+        usersCreate.openUsersCreate();
+    }
+
+    public void action_menu_setting_users(ActionEvent actionEvent) throws IOException {
+        users.openUsers();
     }
 }
