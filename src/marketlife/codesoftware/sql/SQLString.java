@@ -1,4 +1,4 @@
-package marketlife.codesoftware;
+package marketlife.codesoftware.sql;
 
 /**
  * Created by Viktor on 20.01.2017.
@@ -6,14 +6,14 @@ package marketlife.codesoftware;
 public class SQLString {
 
     public String sqluser() {
-        return "mrdrednout_msale";
+        return "ML";
     }
 
     public String sqlpassword() {
-        return "V7gVopcK";
+        return "Derdiedas1";
     }
 
     public String sqlstring() {
-        return "jdbc:mysql://92.53.96.107:3306/mrdrednout_msale";
+        return "jdbc:oracle:thin:@LENOVOX230SERV:1521/XE";
     }
 }

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import marketlife.window.ProductCard.interfaces.impls.CollectionWorkGoodsShort;
 import marketlife.window.ProductsList.objects.Goods;
 import marketlife.window.ProductCard.objects.GoodsShort;
-import marketlife.codesoftware.MySQLConnect;
+import marketlife.codesoftware.sql.MySQLConnect;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

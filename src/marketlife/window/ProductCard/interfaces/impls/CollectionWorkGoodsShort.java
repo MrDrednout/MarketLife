@@ -2,14 +2,12 @@ package marketlife.window.ProductCard.interfaces.impls;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import marketlife.codesoftware.MySQLConnect;
 import marketlife.window.ProductCard.interfaces.WorkGoodsShort;
 import marketlife.window.ProductCard.objects.GoodsShort;
 import marketlife.window.ProductsList.controllers.ProductList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Observable;
 
 /**
  * Created by coole on 11.02.2017.
