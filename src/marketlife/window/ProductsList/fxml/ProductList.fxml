@@ -24,7 +24,8 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Настройки">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Словари" />
+                    <MenuItem fx:id="menu_setting_dict" mnemonicParsing="false" onAction="#action_menu_setting_dict" text="Словари" />
+                        <MenuItem fx:id="menu_setting_mutable" mnemonicParsing="false" onAction="#action_menu_setting_mutable" text="Переменные" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="О программе" />
@@ -51,7 +52,7 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="243.0" prefWidth="600.0">
                            <children>
-                              <TableView fx:id="table_goods" layoutX="84.0" layoutY="24.0" prefHeight="279.0" prefWidth="715.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TableView fx:id="table_goods" editable="true" layoutX="84.0" layoutY="24.0" prefHeight="279.0" prefWidth="715.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
                                   <TableColumn fx:id="column_id_goods" prefWidth="75.0" text="ID товара" />
                                     <TableColumn fx:id="column_type_goods" prefWidth="110.0" text="Тип товара" />

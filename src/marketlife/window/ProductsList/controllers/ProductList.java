@@ -13,6 +13,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries;
+import marketlife.window.ProcessingMutable.controllers.ProcessingMutable;
+import marketlife.window.ProductCreate.controllers.ProductCreate;
 import marketlife.window.ProductsList.interfaces.impls.CollectionWorkGoods;
 import marketlife.window.ProductCard.controllers.ProductCard;
 import marketlife.window.ProductsList.objects.Goods;
@@ -83,6 +86,10 @@ public class ProductList {
     private FXMLLoader fxmlLoader = new FXMLLoader();
     private ProductCard openProductController;
 
+    ProcessingDictionaries processingDictionaries = new ProcessingDictionaries();
+    ProcessingMutable processingMutable = new ProcessingMutable();
+    ProductCreate productCreate = new ProductCreate();
+
     @FXML
     private void initialize(){
         column_id_goods.setCellValueFactory(new PropertyValueFactory<Goods, Integer>("id_goods"));
@@ -147,11 +154,14 @@ public class ProductList {
     }
 
     public void button_action_create(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductCreate/fxml/ProductCreate.fxml"));
-        primaryStage.setTitle("Заполните поля и нажмите \"Создать\"");
-        primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        productCreate.openProductCreate();
+    }
+
+    public void action_menu_setting_dict(ActionEvent actionEvent) throws IOException {
+        processingDictionaries.openProcessingDictionaries();
+    }
+
+    public void action_menu_setting_mutable(ActionEvent actionEvent) throws IOException {
+        processingMutable.openProcessingMutable();
     }
 }
