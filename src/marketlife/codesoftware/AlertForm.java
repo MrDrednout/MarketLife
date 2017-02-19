@@ -17,4 +17,20 @@ public class AlertForm {
         alert.setContentText(cText);
         alert.showAndWait();
     }
+
+    public void alertInformation(String cText) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Великолепно!");
+        alert.setHeaderText(null);
+        alert.setContentText(cText);
+        alert.showAndWait();
+    }
+
+    public void alertError(String hText, String cText) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Ошибка");
+        alert.setHeaderText(hText);
+        alert.setContentText(cText);
+        alert.showAndWait();
+    }
 }

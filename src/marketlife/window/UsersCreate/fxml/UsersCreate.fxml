@@ -25,7 +25,7 @@
             <Label text="Фамилия" GridPane.rowIndex="1" />
             <Label text="Имя" GridPane.rowIndex="2" />
             <Label text="Отчество" GridPane.rowIndex="3" />
-            <TextField disable="true" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="textField_idUser" disable="true" editable="false" GridPane.columnIndex="1" />
             <TextField fx:id="textField_i" promptText="Введите имя пользователя" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="textField_o" promptText="Введите отчество пользователя" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Логин" GridPane.rowIndex="4" />

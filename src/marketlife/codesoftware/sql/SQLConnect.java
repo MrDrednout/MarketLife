@@ -64,26 +64,4 @@ public class SQLConnect {
         st.executeUpdate(query);
     }
 
-    public void executeCreateUser(String f, String i, String o, String logg, String pass, int flg_block) {
-        try {
-            CallableStatement cstmt = c.prepareCall("begin ML.USER_CREATE (?, ?, ?, ?, ?, ?, ?); end;");
-            cstmt.setString("F", f);
-            cstmt.setString("I", i);
-            cstmt.setString("O", o);
-            cstmt.setString("LOGG", logg);
-            cstmt.setString("PASS", pass);
-            cstmt.setInt("FLG_BLOCK", flg_block);
-            cstmt.registerOutParameter("WRONG", java.sql.Types.INTEGER);
-            cstmt.execute();
-            if (cstmt.getInt("WRONG") == 1)
-                System.out.println("Такой пользователь уже существует. Придумайте другой пароль");
-            else
-                System.out.println("Пользователь успешно создан");
-            cstmt.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
 }

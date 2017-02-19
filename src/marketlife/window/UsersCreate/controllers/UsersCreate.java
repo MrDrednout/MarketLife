@@ -12,8 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import marketlife.codesoftware.AlertForm;
 import marketlife.codesoftware.sql.SQLConnect;
+import marketlife.window.UsersCreate.sql.UsersCreateSql;
 
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.sql.SQLException;
 
 /**
@@ -23,6 +25,9 @@ public class UsersCreate {
 
     @FXML
     private Button button_closeUsersCreate;
+
+    @FXML
+    private TextField textField_idUser;
 
     @FXML
     private TextField textField_i;
@@ -42,7 +47,7 @@ public class UsersCreate {
     @FXML
     private CheckBox checkBox_flgBlock;
 
-    SQLConnect sqlConnect = new SQLConnect();
+    UsersCreateSql usersCreateSql = new UsersCreateSql();
     AlertForm alertForm = new AlertForm();
 
     public void openUsersCreate() throws IOException {
@@ -60,7 +65,7 @@ public class UsersCreate {
     }
 
     public void action_button_createUsers(ActionEvent actionEvent) throws SQLException, IOException {
-
+        int id_user = 0;
         if ((textField_f.getLength() == 0)
             || (textField_i.getLength() == 0)
             || (textField_o.getLength() == 0)
@@ -68,11 +73,11 @@ public class UsersCreate {
             || (passwordField_pass.getLength() == 0)
            ) alertForm.alertWarning("Заполнены не все поля", "Поверьте, пожалуйста");
         else {
-            //sqlConnect.SQLOpenConnect();
             int i = 0;
             if (checkBox_flgBlock.isSelected() == true) i = 1;
-            System.out.println(textField_f.getText() + textField_i.getText() + textField_o.getText() + textField_logg.getText() + passwordField_pass.getText() + i);
-            sqlConnect.executeCreateUser(textField_f.getText(), textField_i.getText(), textField_o.getText(), textField_logg.getText(), passwordField_pass.getText(), i);
+            id_user = usersCreateSql.executeCreateUser(textField_f.getText(), textField_i.getText(), textField_o.getText(), textField_logg.getText(), passwordField_pass.getText(), i);
+
         }
+        if (id_user != 0) textField_idUser.setText(Integer.toString(id_user));
     }
 }
