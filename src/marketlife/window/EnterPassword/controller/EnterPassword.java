@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import marketlife.window.EnterPassword.sql.EnterPasswordSql;
 import marketlife.window.ProductsList.controllers.ProductList;
 import marketlife.codesoftware.sql.SQLConnect;
+import marketlife.window.UsersCreate.controllers.UsersCreate;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -139,5 +140,8 @@ public class EnterPassword {
         stage.close();
     }
 
-
+    UsersCreate usersCreate = new UsersCreate();
+    public void action_button_workround(ActionEvent actionEvent) throws IOException {
+        usersCreate.openUsersCreate();
+    }
 }

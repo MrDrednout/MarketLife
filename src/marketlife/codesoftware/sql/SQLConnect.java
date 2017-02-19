@@ -1,10 +1,6 @@
 package marketlife.codesoftware.sql;
 
-    import java.sql.Connection;
-    import java.sql.DriverManager;
-    import java.sql.ResultSet;
-    import java.sql.SQLException;
-    import java.sql.Statement;
+    import java.sql.*;
     import java.util.Locale;
 
 /**
@@ -30,17 +26,17 @@ public class SQLConnect {
             e.printStackTrace();
         }
 
-        try{
+        try {
             c = DriverManager.getConnection(url, user, password);//Установка соединения с БД
             System.out.println("Connect open");
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void SQLCloseConnect() {
         try {
-            if(c != null)
+            if (c != null)
                 c.close();
             System.out.println("Connect close");
         } catch (SQLException e) {
@@ -51,21 +47,43 @@ public class SQLConnect {
     public ResultSet SQLQuery(String query) throws SQLException {
         ResultSet rs = null;
         System.out.println(query);
-        if ( c == null) SQLOpenConnect();
-        try{
+        if (c == null) SQLOpenConnect();
+        try {
             Statement st = c.createStatement();//Готовим запрос
             rs = st.executeQuery(query);
-        } catch(Exception e){
-            e.printStackTrace() ;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return rs;
     }
 
-    public void SQLUpdate (String query) throws SQLException {
+    public void SQLUpdate(String query) throws SQLException {
         System.out.println(query);
         Statement st = c.createStatement();//Готовим запрос
         st.executeUpdate(query);
+    }
+
+    public void executeCreateUser(String f, String i, String o, String logg, String pass, int flg_block) {
+        try {
+            CallableStatement cstmt = c.prepareCall("begin ML.USER_CREATE (?, ?, ?, ?, ?, ?, ?); end;");
+            cstmt.setString("F", f);
+            cstmt.setString("I", i);
+            cstmt.setString("O", o);
+            cstmt.setString("LOGG", logg);
+            cstmt.setString("PASS", pass);
+            cstmt.setInt("FLG_BLOCK", flg_block);
+            cstmt.registerOutParameter("WRONG", java.sql.Types.INTEGER);
+            cstmt.execute();
+            if (cstmt.getInt("WRONG") == 1)
+                System.out.println("Такой пользователь уже существует. Придумайте другой пароль");
+            else
+                System.out.println("Пользователь успешно создан");
+            cstmt.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

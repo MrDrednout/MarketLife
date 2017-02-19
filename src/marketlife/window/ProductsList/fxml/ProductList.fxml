@@ -22,7 +22,7 @@
                         <MenuItem fx:id="menu_ceate_users" mnemonicParsing="false" onAction="#action_menu_ceate_users" text="Пользователя" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Настройки">
+                <Menu mnemonicParsing="false" text="Администрирование">
                   <items>
                     <MenuItem fx:id="menu_setting_dict" mnemonicParsing="false" onAction="#action_menu_setting_dict" text="Словари" />
                         <MenuItem fx:id="menu_setting_mutable" mnemonicParsing="false" onAction="#action_menu_setting_mutable" text="Переменные" />

@@ -25,15 +25,15 @@
             <Label text="Фамилия" GridPane.rowIndex="1" />
             <Label text="Имя" GridPane.rowIndex="2" />
             <Label text="Отчество" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField disable="true" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="textField_i" promptText="Введите имя пользователя" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="textField_o" promptText="Введите отчество пользователя" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Логин" GridPane.rowIndex="4" />
             <Label text="Пароль" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="textField_logg" promptText="Придумайте логин пользователя" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="ID пользователя" />
-            <TextField GridPane.columnIndex="1" />
+            <TextField fx:id="textField_f" promptText="Введите фамилию пользователя" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="passwordField_pass" promptText="Придумайте пароль пользователя" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <GridPane layoutX="32.0" layoutY="180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
@@ -45,13 +45,13 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Создать" GridPane.halignment="CENTER" />
-            <Button fx:id="button_closeUsersCreate" mnemonicParsing="false" onAction="#action_button_closeUsersCreate" prefHeight="25.0" prefWidth="150.0" text="Выход" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="button_createUuser" mnemonicParsing="false" onAction="#action_button_createUsers" prefHeight="25.0" prefWidth="150.0" text="Создать" GridPane.halignment="CENTER" />
+            <Button fx:id="button_closeUsersCreate" cancelButton="true" mnemonicParsing="false" onAction="#action_button_closeUsersCreate" prefHeight="25.0" prefWidth="150.0" text="Выход" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
          </children>
          <padding>
             <Insets left="5.0" right="5.0" />
          </padding>
       </GridPane>
-      <CheckBox layoutX="83.0" layoutY="267.0" mnemonicParsing="false" text="Признак блокировки пользователя" />
+      <CheckBox fx:id="checkBox_flgBlock" layoutX="83.0" layoutY="267.0" mnemonicParsing="false" text="Признак блокировки пользователя" />
    </children>
 </AnchorPane>
