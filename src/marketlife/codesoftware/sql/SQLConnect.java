@@ -8,7 +8,7 @@ package marketlife.codesoftware.sql;
  */
 public class SQLConnect {
 
-    Connection c = null;
+    public static Connection c = null;
     SQLString s = new SQLString();
 
     public void SQLOpenConnect() throws SQLException {

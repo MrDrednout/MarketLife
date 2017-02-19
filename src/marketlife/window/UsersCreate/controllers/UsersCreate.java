@@ -60,6 +60,7 @@ public class UsersCreate {
     }
 
     public void action_button_createUsers(ActionEvent actionEvent) throws SQLException, IOException {
+
         if ((textField_f.getLength() == 0)
             || (textField_i.getLength() == 0)
             || (textField_o.getLength() == 0)
@@ -67,7 +68,7 @@ public class UsersCreate {
             || (passwordField_pass.getLength() == 0)
            ) alertForm.alertWarning("Заполнены не все поля", "Поверьте, пожалуйста");
         else {
-            sqlConnect.SQLOpenConnect();
+            //sqlConnect.SQLOpenConnect();
             int i = 0;
             if (checkBox_flgBlock.isSelected() == true) i = 1;
             System.out.println(textField_f.getText() + textField_i.getText() + textField_o.getText() + textField_logg.getText() + passwordField_pass.getText() + i);

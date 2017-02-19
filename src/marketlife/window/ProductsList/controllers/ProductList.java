@@ -122,8 +122,7 @@ public class ProductList {
     }
 
     public void button_action_show(ActionEvent actionEvent) throws SQLException {
-        workGoodsImpl.fillingGoods();
-        table_goods.setItems(workGoodsImpl.getGoodsList());
+        showSselectGoods();
     }
 
     public void button_card_product_action(ActionEvent actionEvent) throws IOException, SQLException {
@@ -133,7 +132,7 @@ public class ProductList {
         show_card_product(parentWindow);
     }
 
-    public void show_main() throws IOException {
+    public void show_main() throws IOException, SQLException {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductsList/fxml/ProductList.fxml"));
         stage.setTitle("Market Life 0.04b");
@@ -143,6 +142,11 @@ public class ProductList {
         stage.setHeight(700);
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    private void showSselectGoods() throws SQLException {
+        workGoodsImpl.fillingGoods();
+        table_goods.setItems(workGoodsImpl.getGoodsList());
     }
 
     public void show_card_product(Window parentWinwdow) {
