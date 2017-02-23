@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import marketlife.window.ProductCard.interfaces.WorkGoodsShort;
 import marketlife.window.ProductCard.objects.GoodsShort;
-import marketlife.window.ProductsList.controllers.ProductList;
+import marketlife.window.ControlForm.controllers.ProductList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

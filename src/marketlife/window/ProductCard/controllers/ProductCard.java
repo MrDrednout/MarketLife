@@ -9,7 +9,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import marketlife.window.ProductCard.interfaces.impls.CollectionWorkGoodsShort;
 import marketlife.window.ProductCard.sql.ProductCardSQL;
-import marketlife.window.ProductsList.objects.Goods;
+import marketlife.window.ControlForm.objects.Goods;
 import marketlife.window.ProductCard.objects.GoodsShort;
 import marketlife.codesoftware.sql.SQLConnect;
 import java.sql.ResultSet;

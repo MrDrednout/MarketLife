@@ -1,6 +1,6 @@
-package marketlife.window.ProductsList.interfaces;
+package marketlife.window.ControlForm.interfaces;
 
-import marketlife.window.ProductsList.objects.Goods;
+import marketlife.window.ControlForm.objects.Goods;
 
 /**
  * Created by Viktor on 06.01.2017.

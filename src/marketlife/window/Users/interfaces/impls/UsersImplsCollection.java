@@ -3,7 +3,7 @@ package marketlife.window.Users.interfaces.impls;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import marketlife.codesoftware.sql.SQLConnect;
-import marketlife.window.Users.interfaces.WorkUsers;
+import marketlife.window.Users.interfaces.UsersImpls;
 import marketlife.window.Users.objects.UsersObject;
 import marketlife.window.Users.sql.UsersSql;
 
@@ -13,7 +13,7 @@ import java.sql.SQLException;
 /**
  * Created by coole on 22.02.2017.
  */
-public class CollectionUsers implements WorkUsers {
+public class UsersImplsCollection implements UsersImpls {
 
     private ObservableList<UsersObject> usersObjects = FXCollections.observableArrayList();
 

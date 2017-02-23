@@ -10,8 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import marketlife.window.ProductsList.objects.Goods;
-import marketlife.window.Users.interfaces.impls.CollectionUsers;
+import marketlife.window.Users.interfaces.impls.UsersImplsCollection;
 import marketlife.window.Users.objects.UsersObject;
 
 import java.io.IOException;
@@ -20,9 +19,9 @@ import java.sql.SQLException;
 /**
  * Created by coole on 18.02.2017.
  */
-public class Users {
+public class UsersController {
 
-    CollectionUsers collectionUsers = new CollectionUsers();
+    UsersImplsCollection collectionWorkUsers = new UsersImplsCollection();
 
     @FXML
     private Button buton_closeUsers;
@@ -53,19 +52,19 @@ public class Users {
 
     @FXML
     public void initialize() throws SQLException {
-        collectionUsers.fillingUsersList();
+        collectionWorkUsers.fillingUsersList();
         column_id_users.setCellValueFactory(new PropertyValueFactory<UsersObject, Integer>("id_user"));
         column_block_flag.setCellValueFactory(new PropertyValueFactory<UsersObject, Integer>("flg_block"));
         column_f.setCellValueFactory(new PropertyValueFactory<UsersObject, String>("f"));
         column_i.setCellValueFactory(new PropertyValueFactory<UsersObject, String>("i"));
         column_o.setCellValueFactory(new PropertyValueFactory<UsersObject, String>("o"));
         column_login.setCellValueFactory(new PropertyValueFactory<UsersObject, String>("login"));
-        tableView_Users.setItems(collectionUsers.getUsersObjects());
+        tableView_Users.setItems(collectionWorkUsers.getUsersObjects());
     }
 
     public void showUsersList() throws SQLException {
-        collectionUsers.fillingUsersList();
-        tableView_Users.setItems(collectionUsers.getUsersObjects());
+        collectionWorkUsers.fillingUsersList();
+        tableView_Users.setItems(collectionWorkUsers.getUsersObjects());
     }
 
     public void openUsers() throws IOException, SQLException {

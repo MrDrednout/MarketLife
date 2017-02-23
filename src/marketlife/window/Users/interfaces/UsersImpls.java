@@ -5,7 +5,7 @@ import marketlife.window.Users.objects.UsersObject;
 /**
  * Created by coole on 22.02.2017.
  */
-public interface WorkUsers {
+public interface UsersImpls {
 
     void add(UsersObject usersObject);
 

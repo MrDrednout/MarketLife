@@ -7,9 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import marketlife.window.EnterPassword.sql.EnterPasswordSql;
-import marketlife.window.ProductsList.controllers.ProductList;
+import marketlife.window.ControlForm.controllers.ProductList;
 import marketlife.codesoftware.sql.SQLConnect;
-import marketlife.window.UsersCreate.controllers.UsersCreate;
 
 import java.io.IOException;
 import java.sql.ResultSet;

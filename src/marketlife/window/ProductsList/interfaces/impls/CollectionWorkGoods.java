@@ -1,11 +1,11 @@
-package marketlife.window.ProductsList.interfaces.impls;
+package marketlife.window.ControlForm.interfaces.impls;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import marketlife.window.ProductsList.interfaces.WorkGoods;
-import marketlife.window.ProductsList.objects.Goods;
+import marketlife.window.ControlForm.interfaces.WorkGoods;
+import marketlife.window.ControlForm.objects.Goods;
 import marketlife.codesoftware.sql.SQLConnect;
-import marketlife.window.ProductsList.sql.ProductListSQL;
+import marketlife.window.ControlForm.sql.ProductListSQL;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

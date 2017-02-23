@@ -1,4 +1,4 @@
-package marketlife.window.ProductsList.controllers;
+package marketlife.window.ControlForm.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,10 +17,10 @@ import marketlife.window.AboutTheProgram.controllers.AboutTheProgram;
 import marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries;
 import marketlife.window.ProcessingMutable.controllers.ProcessingMutable;
 import marketlife.window.ProductCreate.controllers.ProductCreate;
-import marketlife.window.ProductsList.interfaces.impls.CollectionWorkGoods;
+import marketlife.window.ControlForm.interfaces.impls.CollectionWorkGoods;
 import marketlife.window.ProductCard.controllers.ProductCard;
-import marketlife.window.ProductsList.objects.Goods;
-import marketlife.window.Users.controllers.Users;
+import marketlife.window.ControlForm.objects.Goods;
+import marketlife.window.Users.controllers.UsersController;
 import marketlife.window.UsersCreate.controllers.UsersCreate;
 
 import java.io.IOException;
@@ -94,7 +94,7 @@ public class ProductList {
     ProductCreate productCreate = new ProductCreate();
     AboutTheProgram aboutTheProgram = new AboutTheProgram();
     UsersCreate usersCreate = new UsersCreate();
-    Users users = new Users();
+    UsersController usersController = new UsersController();
 
     @FXML
     private void initialize() throws SQLException {
@@ -186,6 +186,6 @@ public class ProductList {
     }
 
     public void action_menu_setting_users(ActionEvent actionEvent) throws IOException, SQLException {
-        users.openUsers();
+        usersController.openUsers();
     }
 }
