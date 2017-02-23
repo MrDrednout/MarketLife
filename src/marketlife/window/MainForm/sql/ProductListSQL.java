@@ -1,4 +1,4 @@
-package marketlife.window.ControlForm.sql;
+package marketlife.window.MainForm.sql;
 
 /**
  * Created by Viktor on 18.02.2017.

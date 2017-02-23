@@ -1,4 +1,4 @@
-package marketlife.window.ControlForm.controllers;
+package marketlife.window.MainForm.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,9 +17,9 @@ import marketlife.window.AboutTheProgram.controllers.AboutTheProgram;
 import marketlife.window.ProcessingDictionaries.controllers.ProcessingDictionaries;
 import marketlife.window.ProcessingMutable.controllers.ProcessingMutable;
 import marketlife.window.ProductCreate.controllers.ProductCreate;
-import marketlife.window.ControlForm.interfaces.impls.CollectionWorkGoods;
+import marketlife.window.MainForm.interfaces.impls.CollectionWorkGoods;
 import marketlife.window.ProductCard.controllers.ProductCard;
-import marketlife.window.ControlForm.objects.Goods;
+import marketlife.window.MainForm.objects.Goods;
 import marketlife.window.Users.controllers.UsersController;
 import marketlife.window.UsersCreate.controllers.UsersCreate;
 
@@ -136,7 +136,7 @@ public class ProductList {
 
     public void show_main() throws IOException, SQLException {
         Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductsList/fxml/ProductList.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/MainForm/fxml/ProductList.fxml"));
         stage.setTitle("Market Life 0.04b");
         stage.setMinWidth(740);
         stage.setMinHeight(500);

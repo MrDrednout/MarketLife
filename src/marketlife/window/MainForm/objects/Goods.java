@@ -1,4 +1,4 @@
-package marketlife.window.ControlForm.objects;
+package marketlife.window.MainForm.objects;
 
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleIntegerProperty;
