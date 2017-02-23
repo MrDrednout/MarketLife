@@ -21,9 +21,6 @@ import java.sql.SQLException;
 public class EnterPassword {
 
     @FXML
-    private Button button_entrance;
-
-    @FXML
     private Button button_exit;
 
     @FXML
@@ -82,6 +79,10 @@ public class EnterPassword {
 
     //Нажатие на кнопку "Вход", проверка логина и пароля
     public void button_entrance_action(ActionEvent actionEvent) throws IOException, SQLException {
+        passwordСheck();
+    }
+
+    public void passwordСheck() throws SQLException, IOException {
         int fin = 0;// 0 - неверный логин или пароль, 1 - пользователь заблокирован, 2 - вход подтвержден
         String login = text_login.getText(), password = text_password.getText(), password_db = null, login_db = null;
         int id_user = 0, block_flg = 0, attempt = 0, count_user = 0;
@@ -140,8 +141,4 @@ public class EnterPassword {
         stage.close();
     }
 
-    UsersCreate usersCreate = new UsersCreate();
-    public void action_button_workround(ActionEvent actionEvent) throws IOException {
-        usersCreate.openUsersCreate();
-    }
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="715.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProductsList.controllers.ProductList">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="422.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marketlife.window.ProductsList.controllers.ProductList">
    <children>
       <AnchorPane prefHeight="25.0">
          <children>
@@ -20,6 +20,7 @@
                     <MenuItem mnemonicParsing="false" text="Товар" />
                         <MenuItem mnemonicParsing="false" text="Заказ" />
                         <MenuItem fx:id="menu_ceate_users" mnemonicParsing="false" onAction="#action_menu_ceate_users" text="Пользователя" />
+                        <MenuItem fx:id="menu_ceate_users1" mnemonicParsing="false" onAction="#action_menu_ceate_users" text="Словарь" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Администрирование">
@@ -97,12 +98,12 @@
       </AnchorPane>
       <AnchorPane prefHeight="31.0" prefWidth="200.0">
          <children>
-            <Button fx:id="button_show" layoutY="2.0" mnemonicParsing="false" onAction="#button_action_show" prefHeight="25.0" prefWidth="70.0" text="Показать" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
-            <Button fx:id="button_create" layoutX="70.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_action_create" prefHeight="25.0" prefWidth="70.0" text="Создать" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="3.0" />
-            <Button layoutX="140.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Удалить" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="3.0" />
-            <Button layoutX="545.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Покрасить" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="3.0" />
-            <ComboBox layoutX="295.0" layoutY="2.0" prefHeight="25.0" prefWidth="180.0" promptText="Выберите цвет" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="3.0" />
-            <Button fx:id="button_card_product" layoutX="249.0" layoutY="2.0" mnemonicParsing="false" onAction="#button_card_product_action" prefHeight="25.0" prefWidth="150.0" text="Открыть карточку" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="3.0" />
+            <Button fx:id="button_show" layoutY="2.0" mnemonicParsing="false" onAction="#button_action_show" prefHeight="25.0" prefWidth="87.0" text="Обновить" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="3.0" />
+            <Button fx:id="button_create" layoutX="106.0" layoutY="3.0" mnemonicParsing="false" onAction="#button_action_create" prefHeight="25.0" prefWidth="70.0" text="Создать" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="106.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="186.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="В архив" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="186.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="616.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Покрасить" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0" />
+            <ComboBox layoutX="426.0" layoutY="3.0" prefHeight="25.0" prefWidth="132.0" promptText="Выберите цвет" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="3.0" />
+            <Button fx:id="button_card_product" layoutX="266.0" layoutY="3.0" mnemonicParsing="false" onAction="#button_card_product_action" prefHeight="25.0" prefWidth="150.0" text="Открыть карточку" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="266.0" AnchorPane.topAnchor="3.0" />
          </children>
          <VBox.margin>
             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />

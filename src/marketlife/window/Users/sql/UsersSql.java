@@ -5,8 +5,16 @@ package marketlife.window.Users.sql;
  */
 public class UsersSql {
 
-    public String querySelectUsers() {
-        String s = "select * from USERS ";
+    public String selectUsers() {
+        String s =
+                "select \n" +
+                        "    id_user,\n" +
+                        "    f,\n" +
+                        "    i,\n" +
+                        "    o,\n" +
+                        "    login,\n" +
+                        "    flg_block \n" +
+                        "from users";
         return s;
     }
 }

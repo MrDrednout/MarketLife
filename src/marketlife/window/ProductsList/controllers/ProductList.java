@@ -97,7 +97,8 @@ public class ProductList {
     Users users = new Users();
 
     @FXML
-    private void initialize(){
+    private void initialize() throws SQLException {
+        workGoodsImpl.fillingGoods();
         column_id_goods.setCellValueFactory(new PropertyValueFactory<Goods, Integer>("id_goods"));
         column_name_goods.setCellValueFactory(new PropertyValueFactory<Goods, String>("name_goods"));
         column_sum_goods.setCellValueFactory(new PropertyValueFactory<Goods, Integer>("sum_goods"));
@@ -111,6 +112,7 @@ public class ProductList {
         column_in_arhive.setCellValueFactory(new PropertyValueFactory<Goods, Integer>("in_arhive"));
         column_print.setCellValueFactory(new PropertyValueFactory<Goods, String>("print"));
         column_material.setCellValueFactory(new PropertyValueFactory<Goods, String>("material"));
+        table_goods.setItems(workGoodsImpl.getGoodsList());
 
         try {
             fxmlLoader.setLocation(getClass().getResource("/marketlife/window/ProductCard/fxml/ProductCard.fxml"));
@@ -136,7 +138,7 @@ public class ProductList {
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/marketlife/window/ProductsList/fxml/ProductList.fxml"));
         stage.setTitle("Market Life 0.04b");
-        stage.setMinWidth(730);
+        stage.setMinWidth(740);
         stage.setMinHeight(500);
         stage.setWidth(1200);
         stage.setHeight(700);
@@ -144,7 +146,7 @@ public class ProductList {
         stage.show();
     }
 
-    private void showSselectGoods() throws SQLException {
+    public void showSselectGoods() throws SQLException {
         workGoodsImpl.fillingGoods();
         table_goods.setItems(workGoodsImpl.getGoodsList());
     }
@@ -183,7 +185,7 @@ public class ProductList {
         usersCreate.openUsersCreate();
     }
 
-    public void action_menu_setting_users(ActionEvent actionEvent) throws IOException {
+    public void action_menu_setting_users(ActionEvent actionEvent) throws IOException, SQLException {
         users.openUsers();
     }
 }
